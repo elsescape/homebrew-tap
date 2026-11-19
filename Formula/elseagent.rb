@@ -1,27 +1,27 @@
 class Elseagent < Formula
   desc "Codex agent for Slack and Telegram"
   homepage "https://github.com/elsescape/elseagent"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.2.0/elseagent-0.2.0-darwin-arm64.tar.gz"
-      sha256 "5a9bce669025e2dbec99cd164f7828ca7e7d934a30b8b7fe305ec2d316c02e46"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.3.0/elseagent-0.3.0-darwin-arm64.tar.gz"
+      sha256 "1907c43e4970390808ada021d22998f2a716b3167e611894d592beb933473c8c"
     end
     on_intel do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.2.0/elseagent-0.2.0-darwin-x64.tar.gz"
-      sha256 "f1f3eb6c31e2d4b266ab12ec6eeb4165a0042df62b499e187307e7caf5df18ef"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.3.0/elseagent-0.3.0-darwin-x64.tar.gz"
+      sha256 "0dd84d9d6b8327965f66d3495d613a74004404eb818ee8159beb2aec7cf64e06"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.2.0/elseagent-0.2.0-linux-arm64.tar.gz"
-      sha256 "e94cc7574c16f66e63e3453edf9686b83071b060f125b9064d7ebf3b9fbddcda"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.3.0/elseagent-0.3.0-linux-arm64.tar.gz"
+      sha256 "a1abdcb09c6af5942fba634b9035826f853f1b36c4d33396de48de07a61d9550"
     end
     on_intel do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.2.0/elseagent-0.2.0-linux-x64.tar.gz"
-      sha256 "3837168ff5dd99487eeddb56c050e8dc135e03c6c62d276ffb66277360eb3bec"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.3.0/elseagent-0.3.0-linux-x64.tar.gz"
+      sha256 "87db362762dcca123072e0c4c23673fe9524156cca2d5fc1bbb71a6e67f5b3dd"
     end
   end
 
