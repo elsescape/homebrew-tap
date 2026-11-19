@@ -1,27 +1,27 @@
 class Elseagent < Formula
-  desc "Personal master agent that delegates work to background Codex workers"
+  desc "Codex agent for Slack and Telegram"
   homepage "https://github.com/elsescape/elseagent"
-  version "0.0.1"
+  version "0.1.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.0.1/elseagent-0.0.1-darwin-arm64.tar.gz"
-      sha256 "c1679de333826100420300c98133796fa47c6a9e24a4dc4a21ed66296e837ba0"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.1.0/elseagent-0.1.0-darwin-arm64.tar.gz"
+      sha256 "0ee26e98b9070ba14cb1464fc0475fed579becfca27c2f0e4fd81e60f11800d2"
     end
     on_intel do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.0.1/elseagent-0.0.1-darwin-x64.tar.gz"
-      sha256 "158c4af019a9dce1399015a7756ef39db48c86b2a683bf57d636ef6cab9d6cc1"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.1.0/elseagent-0.1.0-darwin-x64.tar.gz"
+      sha256 "b8d67085d3b3676f28b530a1a8e7f83d621e0e8680afdb09982c289f82ac7ca6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.0.1/elseagent-0.0.1-linux-arm64.tar.gz"
-      sha256 "bef1a22ea0d6430df1c050284d7e4d30978482d0422d74b0a7d34c1cb2afdd41"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.1.0/elseagent-0.1.0-linux-arm64.tar.gz"
+      sha256 "281a5312dfc707548fb0c41cd413452463be78d218adccd6717ad841f885bbb8"
     end
     on_intel do
-      url "https://github.com/elsescape/elseagent/releases/download/v0.0.1/elseagent-0.0.1-linux-x64.tar.gz"
-      sha256 "4c02166dda5ac3a98535df92f1f772a3c559800d577b235a4c00e35bf7cd8618"
+      url "https://github.com/elsescape/elseagent/releases/download/v0.1.0/elseagent-0.1.0-linux-x64.tar.gz"
+      sha256 "43fa14735d6d7c09799d45691e29a4dded35b45f0ab84af4287ec923d2a9bf1d"
     end
   end
 
@@ -31,16 +31,15 @@ class Elseagent < Formula
 
   def caveats
     <<~EOS
-      Sign in once, then start the daemon and chat with it:
-        elseagent login
-        elseagent run
-        elseagent tui
+      Install the Codex CLI and make it available on PATH.
+      Run elseagent init, configure Slack or Telegram in ~/.elseagent/config.yml,
+      then start the agent with elseagent run.
 
-      Background workers need the Codex CLI: https://github.com/openai/codex
+      Setup: https://github.com/elsescape/elseagent/blob/main/README.md#local-installation
     EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/elseagent --version")
+    assert_equal version.to_s, shell_output("#{bin}/elseagent --version").strip
   end
 end
